@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #030712;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+.top-bar {
+    height: 70px;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.top-bar button {
+    background: #00ffaa;
+    border: none;
+    padding: 8px 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.report-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+}
+
+#map {
+    height: 500px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+form {
+    background: rgba(255,255,255,0.04);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input,
+form textarea,
+form button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    background: #00ffaa;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .report-container {
+        grid-template-columns: 1fr;
+    }
+
+    #map {
+        height: 300px;
+    }
+}
+/* ===============================
+   FEEDBACK SECTION
+=============================== */
+
+.feedback-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+}
+
+.feedback-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+}
+
+.feedback-sub {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 14px;
+}
+
+.rating {
+    display: flex;
+    gap: 6px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.rating span {
+    color: rgba(255,255,255,0.25);
+    transition: color 0.2s ease;
+}
+
+.rating span.active {
+    color: #00ffaa;
+}
+
+#feedbackText {
+    width: 100%;
+    height: 90px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+#feedbackForm button {
+    background: #00ffaa;
+    border: none;
+    padding: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 8px;
+}

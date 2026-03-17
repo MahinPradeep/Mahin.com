@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPulse | Smart City Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background FIRST -->
+<div class="bg-gradient"></div>
+
+<!-- News -->
+<section class="news-wrapper">
+    <div class="news-label">
+        <span class="news-icon">📢</span>
+        MUNICIPAL NEWS
+    </div>
+    <div class="news-container">
+        <div class="news-track" id="newsTrack"></div>
+    </div>
+</section>
+
+<header>
+    <div class="logo">ECO<span>PULSE</span></div>
+    <div class="system-status">● CORE SYSTEMS ONLINE</div>
+</header>
+
+<main>
+    <div class="grid-container">
+
+        <div class="portal-card" data-portal="citizen">
+            <div class="card-top">
+                <div class="icon">👤</div>
+                <h3>Citizen Portal</h3>
+                <p>Report waste hotspots with GPS and earn rewards.</p>
+            </div>
+        </div>
+
+        <div class="portal-card" data-portal="municipal">
+            <div class="card-top">
+                <div class="icon">🏛️</div>
+                <h3>Municipal Control</h3>
+                <p>Manage city-wide logistics and predictive analytics.</p>
+            </div>
+        </div>
+
+        <div class="portal-card" data-portal="driver">
+            <div class="card-top">
+                <div class="icon">🚚</div>
+                <h3>Driver Dashboard</h3>
+                <p>Route optimization and real-time pickup alerts.</p>
+            </div>
+        </div>
+
+        <div class="portal-card" data-portal="impact">
+            <div class="card-top">
+                <div class="icon">🌍</div>
+                <h3>Impact Tracker</h3>
+                <div class="live-counter" id="co2-counter">0000.00</div>
+                <p>Real-time CO₂ reduction and SDG tracking.</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <div class="system-status">ECOPULSE SYSTEMS</div>
+            <p>© 2026 ECOPULSE SYSTEMS. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="script.js" defer></script>
+
+<script>
+function loadNews() {
+    const newsData = JSON.parse(localStorage.getItem("news")) || [];
+    const newsTrack = document.getElementById("newsTrack");
+
+    if (!newsTrack) return;
+
+    if (newsData.length > 0) {
+        newsTrack.textContent = newsData
+            .map(n => `• ${n}`)
+            .join("     ");
+    } else {
+        newsTrack.textContent =
+            "• Welcome to EcoPulse Smart City Platform";
+    }
+}
+
+window.onload = loadNews;
+
+/* Auto update if municipal page changes news */
+window.addEventListener("storage", function () {
+    loadNews();
+});
+</script>
+
+
+</body>
+</html>

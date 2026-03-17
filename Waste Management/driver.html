@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Driver Dashboard | EcoPulse</title>
+<link rel="stylesheet" href="driver.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <h2>🚛 Driver Dashboard</h2>
+
+    <div class="driver-info">
+        <span id="driverName"></span>
+        <button onclick="loadAssignedReports()">Assigned Locations</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<main class="content">
+    <div id="driverReports"></div>
+</main>
+
+<script src="driver.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Municipal Dashboard | EcoPulse</title>
+
+<link rel="stylesheet" href="municipal.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <h2>🏛️ Municipal Dashboard</h2>
+    <div>
+        <button onclick="showReports()">View Reports</button>
+        <button onclick="showFeedback()">View Feedback</button>
+        <button onclick="showNews()">Manage News</button>
+        <button onclick="showDriverReports()">Driver Reports</button>
+        <button onclick="showRegistration()">Driver Registration</button>
+        <button onclick="showRegistrations()">Registrations</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+</header>
+
+
+
+<main class="content" id="contentArea"></main>
+
+<!-- Image Modal (Global) -->
+<div id="imageModal" class="image-modal" onclick="closeImageModal()">
+    <img id="modalImg">
+</div>
+
+<!-- jsPDF CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="municipal.js"></script>
+
+</body>
+</html>

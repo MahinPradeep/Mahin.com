@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Citizen Portal | EcoPulse</title>
+
+<link rel="stylesheet" href="citizen.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <h2>👤 Citizen Waste Reporting</h2>
+    <button onclick="location.href='index.html'">⬅ Back</button>
+</header>
+
+<section class="report-container">
+
+    <div id="map"></div>
+
+    <form id="reportForm">
+        <h3>Report Waste</h3>
+
+       <input type="text" id="locationText" placeholder="Click on map to fetch address" readonly required>
+
+
+        <textarea id="wasteDesc" placeholder="Describe the waste issue..." required></textarea>
+
+        <input type="file" id="photo" accept="image/*" capture="environment" required>
+
+        <input type="hidden" id="lat">
+        <input type="hidden" id="lng">
+
+        <button type="submit">Submit Report</button>
+    </form>
+
+</section>
+
+<!-- Feedback Section -->
+<section class="feedback-section">
+    <h3>Feedback</h3>
+    <div class="feedback-sub">Rate your experience with the reporting system</div>
+    <div class="rating" id="rating">
+        <span data-value="1">⭐</span>
+        <span data-value="2">⭐</span>
+        <span data-value="3">⭐</span>
+        <span data-value="4">⭐</span>
+        <span data-value="5">⭐</span>
+    </div>
+    <form id="feedbackForm">
+        <textarea id="feedbackText" placeholder="Share your feedback..."></textarea>
+        <input type="hidden" id="feedbackRating">
+        <button type="submit">Submit Feedback</button>
+    </form>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="citizen.js"></script>
+</body>
+</html>

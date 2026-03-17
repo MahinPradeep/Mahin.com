@@ -1,0 +1,81 @@
+/* ===============================
+   GLOBAL RESET
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   DARK BACKGROUND (Same Pattern)
+=============================== */
+.login-body {
+    height: 100vh;
+    background: radial-gradient(circle at center, #111827, #030712);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+}
+
+/* ===============================
+   LOGIN CONTAINER (Glass Effect)
+=============================== */
+.login-container {
+    width: 340px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* ===============================
+   HEADING
+=============================== */
+.login-container h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ===============================
+   INPUT FIELDS
+=============================== */
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* ===============================
+   BUTTON
+=============================== */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background: #00ffaa;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.login-container button:hover {
+    opacity: 0.9;
+}
+
+/* ===============================
+   ERROR TEXT
+=============================== */
+.error-text {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #ff6b6b;
+}

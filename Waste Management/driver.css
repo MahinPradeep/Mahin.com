@@ -1,0 +1,269 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+    background: #030712;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+    min-height: 70px;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.top-bar h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.top-bar div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.top-bar button {
+    background: #00ffaa;
+    color: black;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.top-bar button:hover {
+    background: #00cc88;
+    transform: translateY(-2px);
+}
+
+#logoutBtn {
+    background: #ff5c5c;
+    color: white;
+}
+
+#logoutBtn:hover {
+    background: #e04848;
+}
+
+/* =========================
+   CONTENT AREA
+========================= */
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* =========================
+   DRIVER TASK / JOB CARDS
+========================= */
+.driver-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.driver-card:hover {
+    border-color: #00ffaa;
+    box-shadow: 0 8px 25px rgba(0,255,170,0.2);
+}
+
+/* Completed Task Style */
+.driver-card.completed {
+    border: 2px solid #28a745;
+    background: rgba(40,167,69,0.08);
+}
+
+/* =========================
+   CARD ACTION BUTTONS
+========================= */
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-actions button {
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* Start Button */
+.btn-start {
+    background: #00ffaa;
+    color: black;
+}
+
+.btn-start:hover {
+    background: #00cc88;
+    transform: scale(1.05);
+}
+
+/* Complete Button */
+.btn-complete {
+    background: #28a745;
+    color: white;
+}
+
+.btn-complete:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Reject Button */
+.btn-reject {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-reject:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+.driver-image {
+    width: 180px;
+    margin-top: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.driver-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,255,170,0.5);
+}
+
+/* =========================
+   FULLSCREEN MODAL
+========================= */
+.image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* =========================
+   LOGIN PAGE STYLING
+========================= */
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0f2027;
+}
+
+.login-container {
+    background: #1c2b36;
+    padding: 40px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #00ffaa;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #00cc88;
+}
+
+.error-text {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* =========================
+   DRIVER HEADER INFO
+========================= */
+
+.driver-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#driverName {
+    font-weight: bold;
+}
