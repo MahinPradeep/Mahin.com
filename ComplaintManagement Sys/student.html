@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Complaint | Complaint Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <h1>Complaint Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="student.html">Student</a></li>
+                <li><a href="teacher.html">Teacher</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Student Complaint Form Section -->
+    <section class="complaint-container">
+        <div class="form-box">
+            <h2>Raise a Complaint</h2>
+            <form id="complaintForm">
+                <div class="form-group">
+                    <label for="name">Student Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regNo">Registration Number:</label>
+                    <input type="text" id="regNo" placeholder="Enter your registration number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dept">Department:</label>
+                    <select id="dept" required>
+                        <option value="" disabled selected>Select Department</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Civil">Civil</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentPhone">Phone Number:</label>
+                    <input type="text" id="studentPhone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="issue">Complaint:</label>
+                    <textarea id="issue" rows="4" placeholder="Describe your complaint..." required></textarea>
+                </div>
+
+                <button type="submit">Submit Complaint</button>
+                <p id="successMessage" class="hidden">Complaint Submitted Successfully! ✅</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Complaint Management System. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

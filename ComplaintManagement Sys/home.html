@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <h1>Complaint Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="student.html">Student</a></li>
+                <li><a href="teacher.html">Teacher</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Centered Content Section -->
+    <section class="home-container">
+        <div class="home-content">
+            <h2>Welcome to the Complaint Management System</h2>
+            <p>A **seamless and efficient** way to manage student and faculty complaints.  
+               Get your issues resolved faster with transparency and ease.</p>
+
+            <ul>
+                <li> Simple & Quick Complaint Submission</li>
+                <li> Real-time Complaint Tracking</li>
+                <li> Secure & Transparent System</li>
+                <li> Efficient Resolution Process</li>
+            </ul>
+
+            <button onclick="redirectToStudent()">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Complaint Management System. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function redirectToStudent() {
+            window.location.href = "student.html";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Complaint Management</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <h1>Complaint Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="student.html">Student</a></li>
+                <li><a href="teacher.html">Teacher</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="admin-dashboard">
+        <h2>Admin Dashboard</h2>
+    
+        <!-- Filter Complaints -->
+        <div class="filter-options">
+            <button onclick="loadComplaints('all')">All Complaints</button>
+            <button onclick="loadComplaints('student')">Student Complaints</button>
+            <button onclick="loadComplaints('teacher')">Teacher Complaints</button>
+        </div>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Department</th>
+                    <th>Complaint</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="complaintTableBody">
+                <!-- Complaints will be loaded dynamically -->
+            </tbody>
+        </table>
+    
+        <!-- Logout & Export Buttons Below Table -->
+        <div class="table-actions">
+            <button id="logoutButton" class="logout-button">Logout</button>
+            <button id="exportButton" class="export-button">Export to Excel</button>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Complaint Management System. All Rights Reserved.</p>
+    </footer>
+
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>
